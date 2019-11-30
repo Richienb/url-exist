@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "url-exist",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Check if a URL exists.",
+    "repository": "https://github.com/Richienb/url-exist.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,14 +11,23 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=8.3"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "url",
+        "exists",
+        "check",
+        "validation"
+    ],
+    "dependencies": {
+        "is-url-superb": "^3.0.0",
+        "ky": "^0.16.1",
+        "ky-universal": "^0.3.0"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint-config-richienb": "^0.2.3",

@@ -1,41 +1,46 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# URL Exist [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/url-exist/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/url-exist)
 
-My awesome module.
+Check if a URL exists.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/url-exist.png)](https://npmjs.com/package/url-exist)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install url-exist
 ```
+
+## Why should I use this instead of [`url-exists`](https://www.npmjs.com/package/url-exists)?
+
+- Promise interface.
+- Cross-platform.
+- 97% smaller.
+- Typescript typings included.
+- Catches invalid URLs.
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const urlExist = require("url-exist");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+    await urlExist("https://google.com");
+    //=> true
+
+    await urlExist("https://google.com/404ingURL");
+    //=> false
+
+    await urlExist("notaurl");
+    //=> false
+})();
 ```
 
 ## API
 
-### theModule(input, options?)
+### urlExist(url)
 
-#### input
+#### url
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The URL to check.

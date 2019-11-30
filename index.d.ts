@@ -1,14 +1,22 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Check if a URL exists.
+ * @param url The URL to check.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const urlExist = require("url-exist");
+ *
+ * (async () => {
+ *     await urlExist("https://google.com");
+ *     //=> true
+ *
+ *     await urlExist("https://google.com/404ingURL");
+ *     //=> false
+ *
+ *     await urlExist("notaurl");
+ *     //=> false
+ * })();
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function urlExist(url: string): Promise<boolean>;
 
-export = theModule;
+export = urlExist;
