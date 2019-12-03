@@ -26,7 +26,8 @@
     "dependencies": {
         "is-url-superb": "^3.0.0",
         "ky": "^0.16.1",
-        "ky-universal": "^0.3.0"
+        "ky-universal": "^0.3.0",
+        "universalify": "^0.1.2"
     },
     "devDependencies": {
         "ava": "^2.1.0",

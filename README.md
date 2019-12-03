@@ -14,9 +14,24 @@ npm install url-exist
 
 - Promise interface.
 - Cross-platform.
-- 97% smaller.
+- 70% smaller install size.
 - Typescript typings included.
 - Catches invalid URLs.
+- Supports drop-in replacement.
+
+### Migrating
+
+Replace:
+```js
+const urlExists = require("url-exists")
+```
+
+with:
+```js
+const urlExists = require("url-exist")
+```
+
+That's it!
 
 ## Usage
 
