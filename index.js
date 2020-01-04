@@ -8,6 +8,6 @@ const ky = require("ky-universal").create({
 
 module.exports = fromPromise(async (url) => {
     if (!isURL(url)) return false
-    const { status } = await ky.head(url)
-    return !/4\d\d/.test(status)
+    const res = await ky.head(url)
+    return res !== undefined && !/4\d\d/.test(res.status)
 })

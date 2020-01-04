@@ -9,4 +9,6 @@ test("main", async (t) => {
     t.false(await urlExist("https://httpbin.org/status/404"))
 
     t.false(await urlExist("notaurl"))
+
+    t.false(await urlExist("https://aurlthatdoesnotexistprobably.co"))
 })
