@@ -10,28 +10,14 @@ Check if a URL exists.
 npm install url-exist
 ```
 
-## Why should I use this instead of [`url-exists`](https://www.npmjs.com/package/url-exists)?
+## Improvements over [`url-exists`](https://github.com/boblauer/url-exists)?
 
 - Promise interface.
-- Cross-platform.
-- 70% smaller install size.
-- Typescript typings included.
+- Works cross-platform.
+- 87% smaller install size.
+- Typescript supported included.
 - Catches invalid URLs.
-- Supports drop-in replacement.
-
-### Migrating
-
-Replace:
-```js
-const urlExists = require("url-exists")
-```
-
-with:
-```js
-const urlExists = require("url-exist")
-```
-
-That's it!
+- Actively maintained.
 
 ## Usage
 
@@ -39,14 +25,14 @@ That's it!
 const urlExist = require("url-exist");
 
 (async () => {
-    await urlExist("https://google.com");
-    //=> true
+	await urlExist("https://google.com");
+	//=> true
 
-    await urlExist("https://google.com/404ingURL");
-    //=> false
+	await urlExist("https://google.com/404ingURL");
+	//=> false
 
-    await urlExist("notaurl");
-    //=> false
+	await urlExist("notaurl");
+	//=> false
 })();
 ```
 
@@ -59,3 +45,8 @@ const urlExist = require("url-exist");
 Type: `string`
 
 The URL to check.
+
+## Migrating from v1
+
+- Node.js 10 or later is now required.
+- Support for callbacks have been removed.

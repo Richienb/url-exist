@@ -11,7 +11,7 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8.3"
+        "node": ">=10"
     },
     "scripts": {
         "lint": "xo",
@@ -21,23 +21,24 @@
         "url",
         "exists",
         "check",
-        "validation"
+        "validation",
+        "promise",
+        "modern"
     ],
     "dependencies": {
         "is-url-superb": "^3.0.0",
-        "ky": "^0.16.1",
-        "ky-universal": "^0.3.0",
-        "universalify": "^0.1.2"
+        "ky": "^0.17.0",
+        "ky-universal": "^0.5.0"
     },
     "devDependencies": {
-        "ava": "^2.1.0",
-        "eslint-config-richienb": "^0.2.3",
-        "xo": "^0.25.3"
+        "ava": "^3.3.0",
+        "eslint-config-richienb": "^0.3.0",
+        "xo": "^0.26.1"
     },
     "resolutions": {
-        "eslint": "^6.6.0"
+        "eslint": "^6.8.0"
     },
     "xo": {
-        "extends": "richienb/node"
+        "extends": "richienb"
     }
 }

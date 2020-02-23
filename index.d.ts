@@ -1,7 +1,6 @@
 /**
  * Check if a URL exists.
  * @param url The URL to check.
- * @param cb The callback to execute.
  * @example
  * ```
  * const urlExist = require("url-exist");
@@ -18,7 +17,6 @@
  * })();
  * ```
 */
-declare function urlExist(url: string): Promise<boolean>;
-declare function urlExist(url: string, cb: (err?: Error, exists: boolean) => any): Promise<boolean>;
+declare function urlExist(url: string): Promise<boolean>
 
-export = urlExist;
+export = urlExist
