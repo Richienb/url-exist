@@ -10,7 +10,7 @@ Check if a URL exists.
 npm install url-exist
 ```
 
-## Improvements over [`url-exists`](https://github.com/boblauer/url-exists)?
+## Improvements over [`url-exists`](https://github.com/boblauer/url-exists)
 
 - Promise interface.
 - Works cross-platform.
