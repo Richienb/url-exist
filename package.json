@@ -1,6 +1,6 @@
 {
 	"name": "url-exist",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Check if a URL exists.",
 	"repository": "https://github.com/Richienb/url-exist.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
