@@ -15,7 +15,7 @@ npm install url-exist
 - Promise interface.
 - Works cross-platform.
 - 87% smaller install size.
-- Typescript supported included.
+- Typescript support included.
 - Catches invalid URLs.
 - Actively maintained.
 
