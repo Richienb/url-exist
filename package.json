@@ -33,7 +33,7 @@
 	},
 	"devDependencies": {
 		"ava": "^3.5.0",
-		"eslint-config-richienb": "^0.3.0",
+		"eslint-config-richienb": "^0.4.2",
 		"xo": "^0.26.1"
 	},
 	"resolutions": {
