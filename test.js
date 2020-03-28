@@ -1,7 +1,7 @@
 const test = require("ava")
 const urlExist = require(".")
 
-test("main", async (t) => {
+test("main", async t => {
 	t.true(await urlExist("https://httpbin.org/status/200"))
 
 	t.true(await urlExist("https://httpbin.org/status/301"))
