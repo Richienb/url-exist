@@ -45,8 +45,3 @@ const urlExist = require("url-exist");
 Type: `string`
 
 The URL to check.
-
-## Migrating from v1
-
-- Node.js 10 or later is now required.
-- Support for callbacks have been removed.
