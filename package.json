@@ -15,7 +15,7 @@
 	},
 	"scripts": {
 		"lint": "xo",
-		"test": "yarn lint && ava"
+		"test": "xo && ava"
 	},
 	"keywords": [
 		"url",
@@ -32,12 +32,9 @@
 		"ky-universal": "^0.5.0"
 	},
 	"devDependencies": {
-		"ava": "^3.8.1",
-		"eslint-config-richienb": "^0.4.2",
-		"xo": "^0.30.0"
-	},
-	"resolutions": {
-		"eslint": "^6.8.0"
+		"ava": "^3.13.0",
+		"eslint-config-richienb": "^0.5.0",
+		"xo": "^0.33.1"
 	},
 	"xo": {
 		"extends": "richienb"

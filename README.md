@@ -22,18 +22,16 @@ npm install url-exist
 ## Usage
 
 ```js
-const urlExist = require("url-exist");
+const urlExist = require("url-exist")
 
-(async () => {
-	await urlExist("https://google.com");
-	//=> true
+await urlExist("https://google.com")
+//=> true
 
-	await urlExist("https://google.com/404ingURL");
-	//=> false
+await urlExist("https://google.com/404ingURL")
+//=> false
 
-	await urlExist("notaurl");
-	//=> false
-})();
+await urlExist("notaurl")
+//=> false
 ```
 
 ## API
