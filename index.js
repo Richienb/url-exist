@@ -6,10 +6,6 @@ const ky = require("ky-universal").create({
 })
 
 module.exports = async url => {
-	if (typeof url !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof url}`)
-	}
-
 	if (!isUrl(url)) {
 		return false
 	}
