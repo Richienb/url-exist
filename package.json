@@ -1,6 +1,6 @@
 {
 	"name": "url-exist",
-	"version": "2.0.2",
+	"version": "3.0.0",
 	"description": "Check if a URL exists.",
 	"repository": "Richienb/url-exist",
 	"author": {
