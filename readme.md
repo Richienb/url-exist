@@ -1,4 +1,4 @@
-# URL Exist [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/url-exist/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/url-exist)
+# URL Exist
 
 Check if a URL exists.
 
@@ -14,7 +14,7 @@ npm install url-exist
 
 - Promise interface.
 - Works cross-platform.
-- 87% smaller install size.
+- Smaller install size.
 - Typescript support included.
 - Catches invalid URLs.
 - Actively maintained.
@@ -22,18 +22,16 @@ npm install url-exist
 ## Usage
 
 ```js
-const urlExist = require("url-exist");
+import urlExist from "url-exist"
 
-(async () => {
-	await urlExist("https://google.com");
-	//=> true
+await urlExist("https://google.com")
+//=> true
 
-	await urlExist("https://google.com/404ingURL");
-	//=> false
-
-	await urlExist("notaurl");
-	//=> false
-})();
+await urlExist("https://google.com/404ingURL")
+//=> false
+ 
+await urlExist("notaurl")
+//=> false
 ```
 
 ## API

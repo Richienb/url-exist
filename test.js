@@ -1,10 +1,8 @@
-const test = require("ava")
-const urlExist = require(".")
+import test from "ava"
+import urlExist from "./index.js"
 
 test("main", async t => {
 	t.true(await urlExist("https://httpbin.org/status/200"))
-
-	t.true(await urlExist("https://httpbin.org/status/301"))
 
 	t.false(await urlExist("https://httpbin.org/status/404"))
 
