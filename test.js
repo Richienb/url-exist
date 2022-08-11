@@ -6,7 +6,7 @@ test('main', async t => {
 
 	t.false(await urlExist('https://httpbin.org/status/404'));
 
-	t.throwsAsync(urlExist('notaurl'), {message: 'Invalid URL'});
+	await t.throwsAsync(urlExist('notaurl'), {message: 'Invalid URL'});
 
 	t.false(await urlExist('https://aurlthatprobablydoesnotexist.co'));
 });
