@@ -1,20 +1,29 @@
-import isUrl from "is-url-superb"
-import ky from "ky-universal"
-
-const urlExist = async url => {
-	if (typeof url !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof url}`)
+export default async function urlExist(url, {method = 'HEAD', timeout = Number.POSITIVE_INFINITY} = {}) {
+	if (typeof url !== 'string') {
+		throw new TypeError(`Expected url to be a string, got ${typeof url}`);
 	}
 
-	if (!isUrl(url)) {
-		return false
+	// Check if url is valid
+	new URL(url); // eslint-disable-line no-new
+
+	const controller = new AbortController();
+
+	let timeoutId;
+
+	if (timeout !== Number.POSITIVE_INFINITY) {
+		timeoutId = setTimeout(() => {
+			controller.abort();
+		}, timeout);
 	}
 
-	const response = await ky.head(url, {
-		throwHttpErrors: false
-	})
+	try {
+		const {status} = await fetch(url, {method, signal: controller.signal});
 
-	return response !== undefined && (response.status < 400 || response.status >= 500)
+		return status < 400 || status >= 500;
+	} catch {
+		return false;
+	} finally {
+		controller.abort();
+		clearTimeout(timeoutId);
+	}
 }
-
-export default urlExist

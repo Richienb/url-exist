@@ -2,44 +2,51 @@
 
 Check if a URL exists.
 
-[![NPM Badge](https://nodei.co/npm/url-exist.png)](https://npmjs.com/package/url-exist)
-
 ## Install
 
 ```sh
 npm install url-exist
 ```
 
-## Improvements over [`url-exists`](https://github.com/boblauer/url-exists)
-
-- Promise interface.
-- Works cross-platform.
-- Smaller install size.
-- Typescript support included.
-- Catches invalid URLs.
-- Actively maintained.
-
 ## Usage
 
 ```js
-import urlExist from "url-exist"
+import urlExist from 'url-exist';
 
-await urlExist("https://google.com")
+await urlExist('https://google.com');
 //=> true
 
-await urlExist("https://google.com/404ingURL")
+await urlExist('https://google.com/404ingURL');
 //=> false
  
-await urlExist("notaurl")
-//=> false
+await urlExist('notaurl');
+//=> TypeError: Invalid URL
 ```
 
 ## API
 
-### urlExist(url)
+### urlExist(url, options?)
 
 #### url
 
 Type: `string`
 
 The URL to check.
+
+#### options
+
+Type: `object`
+
+##### method
+
+Type: `string`\
+Default: `HEAD`
+
+HTTP method used to make the request.
+
+##### timeout
+
+Type: `number`\
+Default: `Infinity`
+
+The time to wait before aborting the request and returning false.
